@@ -28,7 +28,7 @@ Welcome to "World of Games: The Epic Journey"! This project is a text-based adve
 2. **Navigate to the Project Directory:**
 
     ```bash
-    cd Devops-Experts
+    cd World of game
     ```
 
 3. **Run the Script:**
