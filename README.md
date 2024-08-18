@@ -22,7 +22,7 @@ Welcome to "World of Games: The Epic Journey"! This project is a text-based adve
 1. **Clone the Repository:**
 
     ```bash
-    git clone https://github.com/shaid2233/Devops-Experts.git
+    git clone https://github.com/shaid2233/World_Of_Game.git
     ```
 
 2. **Navigate to the Project Directory:**
