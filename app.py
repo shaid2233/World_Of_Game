@@ -3,7 +3,10 @@ import sys
 def welcome(username):
     username = input("what your name?")
     print(f"“Hi {username} and welcome to the World of Games: The Epic Journey”")
-    return welcome
+    welcome()
+
+
+
 
 
 
@@ -35,7 +38,7 @@ def start_play():
             sys.exit("Bye! 👋")
 
 
-welcome(input)
+
 start_play()
 
 
