@@ -1,45 +1,43 @@
 import sys
 
-def welcome(username):
-    username = input("what your name?")
-    print(f"“Hi {username} and welcome to the World of Games: The Epic Journey”")
-    welcome()
 
-
-
-
+def welcome():
+    username = input("What is your name? ")
+    print(f"Hi {username} and welcome to the World of Games: The Epic Journey")
 
 
 def start_play():
+    while True:
         player_choice = input(
-                "\n Please Enter... \n1 for Memory Game \n2 for Guess Game , \n3 for Currency Roulette:\n\n"
-            )
-        if player_choice not in ['1', '2','3']:
-            print( "you must enter 1, 2 or 3. ")
-            return start_play
+            "\nPlease Enter...\n1 for Memory Game\n2 for Guess Game\n3 for Currency Roulette:\n\n"
+        )
+        if player_choice in ["1", "2", "3"]:
+            return player_choice
+        print("You must enter 1, 2 or 3.")
 
-        diffculty_level = input ("Enter Dfficulty level between 1 and 5:")
-        if diffculty_level not in  ['1', '2','3', '4', '5']:
-            print("you must enter 1, 2 or 3, 4 or 5.")
-            return start_play
 
-        while True:
-            playagain = input("\nY for Yes or \nQ to Quit\n")
-            if playagain.lower() not in ["y", "q"]:
-                continue
-            else:
-                break
+def choose_difficulty():
+    while True:
+        difficulty_level = input("Enter Difficulty level between 1 and 5: ")
+        if difficulty_level in ["1", "2", "3", "4", "5"]:
+            return difficulty_level
+        print("You must enter 1, 2, 3, 4 or 5.")
 
-        if playagain.lower() == "y":
-            return start_play()
-        else:
+
+def play_again():
+    while True:
+        playagain = input("\nPlay again? (Y for Yes or Q to Quit): ").lower()
+        if playagain == "y":
+            return True
+        elif playagain == "q":
             print("\n🎉🎉🎉🎉")
             print("Thank you for playing!\n")
             sys.exit("Bye! 👋")
+        else:
+            print("Please enter Y or Q.")
 
 
-
+welcome()
 start_play()
-
-
-
+choose_difficulty()
+play_again()
