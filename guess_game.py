@@ -2,7 +2,6 @@ import random
 
 def generate_number():
     random_number = random.randint(0, 100)  # Random number between 0 and 100
-    print(f"Random number (for debugging): {random_number}")
     return random_number
 
 def get_guess_from_user():
@@ -16,7 +15,7 @@ def compare_values(val1, val2, tolerance):
         print(f"Sorry, the actual number was {val1}, and your guess was {val2}.")
 
 # Main game flow
-def start_game():
+def play():
     # Generate the random number
     val1 = generate_number()
     
@@ -46,4 +45,4 @@ def start_game():
     compare_values(val1, val2, tolerance)
 
 # Start the game
-start_game()
+play()

@@ -44,7 +44,7 @@ def is_list_equal(list1, list2):
         print(f"You entered: {list2}")
         return False
 
-def play_game():
+def play():
     # Generate the random sequence
     random_numbers = generate_sequence()
     
@@ -55,7 +55,7 @@ def play_game():
     is_list_equal(random_numbers, user_numbers)
 
 # Start the game
-play_game()
+play()
      
 
 

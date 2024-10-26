@@ -42,6 +42,7 @@ def compare_results(final_value):
         print(f"You're wrong! The correct answer was: {final_value:.2f} ILS")
         return False
 
+
 def play():
     # Call the choose_difficulty function to get the user's choice
     difficulty = choose_difficulty()
