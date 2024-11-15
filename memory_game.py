@@ -1,4 +1,3 @@
-from utils import choose_difficulty
 import random
 import time
 import ast
@@ -6,22 +5,18 @@ import ast
 difficulty = choose_difficulty()
 
 
-def generate_sequence():
-    if difficulty == "1":
-        rand_list = [random.randint(1, 101) for _ in range(1)]
-        time.sleep(1)
-    elif difficulty == "2":
-        rand_list = [random.randint(1, 101) for _ in range(2)]
-        time.sleep(0.9)
-    elif difficulty == "3":
-        rand_list = [random.randint(1, 101) for _ in range(3)]
-        time.sleep(0.8)
-    elif difficulty == "4":
-        rand_list = [random.randint(1, 101) for _ in range(4)]
-        time.sleep(0.7)
-    elif difficulty == "5":
-        rand_list = [random.randint(1, 101) for _ in range(5)]
-        time.sleep(0.6)
+def generate_sequence(difficulty_levels):
+    rand_list = []
+
+    # todo for loop
+    for difficulty in difficulty_levels:
+        # for each difficulty add reverse wait time
+        rand_list = [random.randint(1, 101) for _ in range(difficulty)]
+        # 1 -> 5, 2 -> 4, 3-> 3, 4- > 2, 5 -> 1
+        time.sleep(difficulty_levels[-difficulty])
+
+
+
     print("Remember these numbers:", rand_list)
     time.sleep(2)  # Give player time to memorize
     print("\n" * 50)  # Clear screen
@@ -48,9 +43,9 @@ def is_list_equal(list1, list2):
         return False
 
 
-def play():
+def play(difficulty_levels):
     # Generate the random sequence
-    random_numbers = generate_sequence()
+    random_numbers = generate_sequence(difficulty_levels)
 
     # Get user's guess
     user_numbers = get_list_from_user()

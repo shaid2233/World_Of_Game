@@ -1,4 +1,4 @@
-from utils import choose_difficulty
+
 
 
 def add_score():

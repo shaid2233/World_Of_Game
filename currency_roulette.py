@@ -1,4 +1,3 @@
-from utils import choose_difficulty
 import os
 import requests
 import random

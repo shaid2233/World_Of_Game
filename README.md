@@ -3,7 +3,7 @@
 
 ## Overview
 
-Welcome to "World of Games: The Epic Journey"! This project is a text-based adventure game that includes multiple mini-games to entertain and challenge the player. The player can choose from different games and adjust the difficulty level before starting the adventure.
+Welcome to "World of Games: The Epic Journey"! This text-based adventure game project includes multiple mini-games to entertain and challenge the player. Before starting the adventure, the player can choose from different games and adjust the difficulty level.
 
 ## Features
 
@@ -15,7 +15,7 @@ Welcome to "World of Games: The Epic Journey"! This project is a text-based adve
 
 ### Prerequisites
 
-- Python 3.x installed on your system.
+- Python 3. x installed on your system.
 
 ### How to Run
 
@@ -61,4 +61,4 @@ For any questions or feedback, please contact:
 
 
 
-Feel free to adjust or expand this `README.txt` as needed to better fit the specifics of your project or to include any additional information.
+Feel free to adjust or expand this `README.txt` as needed to fit the specifics of your project better or to include any additional information.

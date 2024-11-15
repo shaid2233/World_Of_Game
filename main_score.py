@@ -1,11 +1,17 @@
-from flask import render_template_string
-render_template_string('''<html>
-  <head>
-    <title>Scores Game</title>
-  </head>
-  <body>
-    <h1>The score is:</h1>
-    <div id="score">{SCORE}</div>
-  </body>
-</html>
-''')
+from flask import Flask, render_template
+
+app = Flask(__name__, template_folder='templates')
+
+app.debug = True  # Enable debug mode
+
+@app.route('/')
+def score_server():
+    try:
+        with open('scores.txt', 'r') as file:
+            score = file.read().strip()
+        return render_template('index.html', score=score)
+    except:
+        return render_template('index.html', score='ERROR')
+
+if __name__ == '__main__':
+    app.run()
