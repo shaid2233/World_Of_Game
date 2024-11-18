@@ -1,17 +1,36 @@
-from flask import Flask, render_template
+from flask import Flask
+import os
 
-app = Flask(__name__, template_folder='templates')
-
-app.debug = True  # Enable debug mode
+app = Flask(__name__)
 
 @app.route('/')
 def score_server():
     try:
-        with open('scores.txt', 'r') as file:
-            score = file.read().strip()
-        return render_template('index.html', score=score)
-    except:
-        return render_template('index.html', score='ERROR')
+        with open('Scores.txt', 'r') as f:
+            score = f.read().strip()
+        
+        return f'''
+        <html>
+        <head>
+            <title>Scores Game</title>
+        </head>
+        <body>
+            <h1>The score is <div id="score">{score}</div></h1>
+        </body>
+        </html>
+        '''
+    except Exception as e:
+        return '''
+        <html>
+        <head>
+            <title>Scores Game</title>
+        </head>
+        <body>
+            <h1>Error</h1>
+            <div id="score">Error occurred while reading the score</div>
+        </body>
+        </html>
+        '''
 
 if __name__ == '__main__':
-    app.run()
+    app.run(host='0.0.0.0', port=5000)

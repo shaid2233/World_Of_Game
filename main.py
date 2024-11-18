@@ -1,7 +1,4 @@
-from app import start_play, welcome
+from app import main
 
-welcome()
-
-
-# start_play -> input('please select game and difficulty') -> save variables -> trigger corresponding game
-start_play()
+if __name__ == "__main__":
+    main()
